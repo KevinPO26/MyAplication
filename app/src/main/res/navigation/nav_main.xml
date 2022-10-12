@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/login">
+
+    <fragment
+        android:id="@+id/login"
+        android:name="ni.edu.uca.myapplication.Login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login_to_menu"
+            app:destination="@id/menu" />
+    </fragment>
+    <fragment
+        android:id="@+id/menu"
+        android:name="ni.edu.uca.myapplication.Menu"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menu_to_tabla"
+            app:destination="@id/tabla" />
+        <action
+            android:id="@+id/action_menu_to_media"
+            app:destination="@id/media" />
+    </fragment>
+    <fragment
+        android:id="@+id/tabla"
+        android:name="ni.edu.uca.myapplication.Tabla"
+        android:label="fragment_tabla"
+        tools:layout="@layout/fragment_tabla" />
+    <fragment
+        android:id="@+id/media"
+        android:name="ni.edu.uca.myapplication.Media"
+        android:label="fragment_media"
+        tools:layout="@layout/fragment_media" />
+</navigation>
